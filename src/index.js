@@ -1,4 +1,4 @@
 import "modern-normalize";
 import "./styles.css";
 
-console.log("dou");
+import Ship from "./modules/ship.js";
