@@ -5,7 +5,7 @@ describe("hit works with a ship of size 1", () => {
   const ship = Ship(1);
 
   test("hit works at position 0", () => {
-    ship.hit(0);
+    ship.hit();
     expect(ship.getSurface()).toEqual(["x"]);
   });
 });
@@ -13,27 +13,27 @@ describe("hit works with a ship of size 1", () => {
 describe("hit works with a ship of size 4", () => {
   test("hit works at position 0", () => {
     const ship = Ship(4);
-    ship.hit(0);
+    ship.hit();
     expect(ship.getSurface()).toEqual(["x", "", "", ""]);
   });
 
-  test("hit works at position 1", () => {
-    const ship = Ship(4);
-    ship.hit(1);
-    expect(ship.getSurface()).toEqual(["", "x", "", ""]);
-  });
+  //   test("hit works at position 1", () => {
+  //     const ship = Ship(4);
+  //     ship.hit(1);
+  //     expect(ship.getSurface()).toEqual(["", "x", "", ""]);
+  //   });
 
-  test("hit works at position 2", () => {
-    const ship = Ship(4);
-    ship.hit(2);
-    expect(ship.getSurface()).toEqual(["", "", "x", ""]);
-  });
+  //   test("hit works at position 2", () => {
+  //     const ship = Ship(4);
+  //     ship.hit(2);
+  //     expect(ship.getSurface()).toEqual(["", "", "x", ""]);
+  //   });
 
-  test("hit works at position 3", () => {
-    const ship = Ship(4);
-    ship.hit(3);
-    expect(ship.getSurface()).toEqual(["", "", "", "x"]);
-  });
+  //   test("hit works at position 3", () => {
+  //     const ship = Ship(4);
+  //     ship.hit(3);
+  //     expect(ship.getSurface()).toEqual(["", "", "", "x"]);
+  //   });
 });
 
 // isSunk method

@@ -2,7 +2,10 @@ const Ship = (size) => {
   let surface;
 
   const hit = (position) => {
-    surface[position] = "x";
+    // surface[position] = "x";
+    for (let i = 0; i < surface.length; i++) {
+      if (surface[i] === "") return (surface[i] = "x");
+    }
   };
 
   const isSunk = () => {
@@ -26,6 +29,7 @@ const Ship = (size) => {
     hit,
     isSunk,
     getSurface,
+    surface, //for development
   };
 };
 
