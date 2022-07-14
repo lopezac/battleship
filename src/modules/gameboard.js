@@ -25,6 +25,15 @@ const Gameboard = (Ship) => {
     return true;
   }
 
+  function anyMoveWasMade() {
+    for (let row of getBoard()) {
+      for (let cell of row) {
+        if (["h", "m"].includes(cell)) return true;
+      }
+    }
+    return false;
+  }
+
   function availablePosition(position) {
     if (isAShipNear(position)) return false;
 
@@ -75,6 +84,8 @@ const Gameboard = (Ship) => {
     receiveAttack,
     getBoard,
     allShipsSunk,
+    anyMoveWasMade,
+    availablePosition,
   };
 };
 
