@@ -12,8 +12,12 @@ const Gameboard = (Ship) => {
     const ship = getShip(position);
     // h means hitted a ship, m means missed and hit water
     const result = ship ? "h" : "m";
-    if (ship) ship.hit();
+    if (isAShip(ship)) ship.hit();
     board[position[0]][position[1]] = result;
+  }
+
+  function isAShip(cell) {
+    return !["", "h", "m"].includes(cell);
   }
 
   function allShipsSunk() {
@@ -78,6 +82,11 @@ const Gameboard = (Ship) => {
     return row < 0 || row > 9 || col < 0 || col > 9;
   }
 
+  function attackedPosition(position) {
+    const cell = board[position[0]][position[1]];
+    return ["h", "m"].includes(cell);
+  }
+
   return {
     placeShip,
     getShip,
@@ -85,7 +94,7 @@ const Gameboard = (Ship) => {
     getBoard,
     allShipsSunk,
     anyMoveWasMade,
-    availablePosition,
+    attackedPosition,
   };
 };
 

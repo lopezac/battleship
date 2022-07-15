@@ -1,0 +1,52 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Boards */
+.boards {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* individual board */
+.player-board,
+.computer-board {
+  width: 300px;
+  height: 300px;
+  display: flex;
+}
+
+/* Cells */
+.row > .cell {
+  width: 30px;
+  height: 30px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.row:nth-child(1) {
+  border-left: 1px solid black;
+}
+
+.row > .cell:nth-child(1) {
+  border-top: 1px solid black;
+}
+
+.row > .cell.ship {
+  background-color: blue;
+}
+
+.row > .cell.shipHitted {
+  background-color: red;
+}
+
+.row > .cell.miss {
+  background-color: lightskyblue;
+}
