@@ -96,7 +96,7 @@ const gameDOM = (() => {
   }
 
   function getComputerBoardCells() {
-    return cBoardCells; //document.querySelectorAll(".computer-board .cell");
+    return document.querySelectorAll(".computer-board .cell");
   }
 
   function getPlayerBoardCells() {

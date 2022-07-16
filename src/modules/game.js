@@ -52,12 +52,7 @@ const Game = ((gameDOM, Ship) => {
       return;
     }
     const position = computer.getComputerMove();
-    try {
-      playerBoard.receiveAttack(position);
-    } catch (error) {
-      console.log(error);
-      console.log(position);
-    }
+    playerBoard.receiveAttack(position);
     gameDOM.attack(playerBoard, playerBoardDiv, position);
 
     switchPlayer();
@@ -72,7 +67,6 @@ const Game = ((gameDOM, Ship) => {
   }
 
   function reset() {
-    console.log("reset called");
     computerBoard = Gameboard(Ship);
     computer = Player(computerBoard, true);
 
