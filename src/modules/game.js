@@ -88,42 +88,42 @@ const Game = ((gameDOM, Ship) => {
     gameboard.placeShip(Ship(1), [[9, 0]]);
     gameboard.placeShip(Ship(1), [[0, 9]]);
 
-    // gameboard.placeShip(Ship(2), [
-    //   [2, 0],
-    //   [3, 0],
-    // ]);
-    // gameboard.placeShip(Ship(2), [
-    //   [2, 9],
-    //   [3, 9],
-    // ]);
-    // gameboard.placeShip(Ship(2), [
-    //   [5, 8],
-    //   [5, 9],
-    // ]);
+    gameboard.placeShip(Ship(2), [
+      [2, 0],
+      [3, 0],
+    ]);
+    gameboard.placeShip(Ship(2), [
+      [2, 9],
+      [3, 9],
+    ]);
+    gameboard.placeShip(Ship(2), [
+      [5, 8],
+      [5, 9],
+    ]);
 
-    // gameboard.placeShip(Ship(3), [
-    //   [4, 2],
-    //   [4, 3],
-    //   [4, 4],
-    // ]);
-    // gameboard.placeShip(Ship(3), [
-    //   [6, 2],
-    //   [6, 3],
-    //   [6, 4],
-    // ]);
+    gameboard.placeShip(Ship(3), [
+      [4, 2],
+      [4, 3],
+      [4, 4],
+    ]);
+    gameboard.placeShip(Ship(3), [
+      [6, 2],
+      [6, 3],
+      [6, 4],
+    ]);
 
-    // gameboard.placeShip(Ship(3), [
-    //   [2, 3],
-    //   [6, 3],
-    //   [6, 4],
-    // ]);
+    gameboard.placeShip(Ship(3), [
+      [2, 3],
+      [6, 3],
+      [6, 4],
+    ]);
 
-    // gameboard.placeShip(Ship(4), [
-    //   [8, 3],
-    //   [8, 4],
-    //   [8, 5],
-    //   [8, 6],
-    // ]);
+    gameboard.placeShip(Ship(4), [
+      [8, 3],
+      [8, 4],
+      [8, 5],
+      [8, 6],
+    ]);
   }
 
   return {
